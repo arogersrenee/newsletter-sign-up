@@ -21,42 +21,46 @@
 
   <main>
     <!-- Sign-up form start -->
-    <div class="signup-screen">
+    <div class="signup-screen hide">
       <div class="hero-image">
         <picture>
           <source media="(min-width: 70rem )" srcset="assets/images/illustration-sign-up-desktop.svg">
           <img src="assets/images/illustration-sign-up-mobile.svg" alt="product illustration"></picture>
       </div>
-      <div class="signup-content">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-      </div>
-      <form action="#" novalidate>
-        <div class="email-row">
-          <div class="email-label">
-            <label for="email">Email address</label>
-            <span class="no-error error-msg">Valid email required</span>
-          </div>
-          <input type="email" placeholder="email@company.com" id="email" name="email">
+      <div class="signup-section">
+        <div class="signup-content">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
         </div>
-        <input type="submit" value="Subscribe to monthly newsletter">
-      </form>
+        <form action="#" novalidate>
+          <div class="email-row">
+            <div class="email-label">
+              <label for="email">Email address</label>
+              <span class="no-error error-msg">Valid email required</span>
+            </div>
+            <input type="email" placeholder="email@company.com" id="email" name="email">
+          </div>
+          <input type="submit" value="Subscribe to monthly newsletter">
+        </form>
+      </div>
     </div>
     <!-- Sign-up form end -->
     <!-- Success message start -->
-    <div class="success-message hide">
+    <div class="success-message">
       <div class="success-content">
-        <img src="assets/images/icon-success.svg" alt="checkmark icon">
-        <h1>Thanks for subscribing!</h1>
-        <p>
-          A confirmation email has been sent to <span id="email-placeholder">ash@loremcompany.com</span>.
-          Please open it and click the button inside to confirm your subscription.
-        </p>
+        <img src="assets/images/icon-success.svg" alt="checkmark icon" class="success-icon">
+        <div class="success-content">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <span id="email-placeholder">ash@loremcompany.com</span>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
       </div>
       <a href="#">Dismiss message</a>
     </div>

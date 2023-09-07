@@ -59,13 +59,142 @@ table {
 :root {
     --ff-primary: 'Roboto', sans-serif;
 
+    --fw-regular: 400;
+    --fw-bold: 700;
+
     --clr-darknavy: #242742;
     --clr-palenavy: #36384D;
     --clr-white: #ffffff;
-    --clr-gray-25: rgba(25, 24, 43, 0.25); 
+    --clr-gray-25: rgba(25, 24, 43, 0.25);
+    --clr-vermellion: #FF6155; 
+    --clr-vermellion-15: rgba(255, 97, 85, 0.15);
 
     --bs-button: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+    --bs-body: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Custom variables end*/
+body {
+    font-family: var(--ff-primary);
+    color: var(--clr-darknavy);
+    font-weight: var(--fw-regular);
+}
+
+.signup-screen, .signup-section {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.signup-section {
+    padding: 0 1.5rem 2rem;
+
+}
+
+.signup-content, .success-content {
+    display: grid;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    font-weight: var(--fw-bold);
+}
+
+p, li {
+    line-height: 150%;
+}
+
+#email-placeholder {
+    font-weight: var(--fw-bold);
+}
+
+ul {
+    /* list-style-image: url(assets/images/icon-list.svg);
+    margin-left: 1.5rem; */
+    
+}
+
+li {
+    background: url(assets/images/icon-success.svg) no-repeat left top;
+    background-size: 1.25rem;
+    background-position: left 0.15rem;
+    padding: 0 0 0 2rem;
+}
+
+li:not(:last-child){
+    padding-bottom: 0.75rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.email-label{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+input, a {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+input[type="email"] {
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--clr-gray-25);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--clr-darknavy);
+}
+
+input[type="email"]::placeholder {
+    color: var(--clr-darknavy);
+    opacity: 0.5;
+}
+
+input[type="submit"], a {
+    padding: 1rem;
+    border: none;
+    background-color: var(--clr-darknavy);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+}
+
+.error-msg {
+    color: var(--clr-vermellion);
+    font-weight: var(--fw-bold);
+}
+
+.hide {
+    display: none;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 9rem 1.5rem 2rem;
+}
+
+.success-icon {
+    padding-bottom: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
 
