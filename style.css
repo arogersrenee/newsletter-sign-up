@@ -68,6 +68,7 @@ table {
     --clr-gray-25: rgba(25, 24, 43, 0.25);
     --clr-vermellion: #FF6155; 
     --clr-vermellion-15: rgba(255, 97, 85, 0.15);
+    --clr-gradient1: linear-gradient(#FF6A3A 0%, #FF527B 100%);
 
     --bs-button: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
     --bs-body: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
@@ -78,6 +79,11 @@ body {
     font-family: var(--ff-primary);
     color: var(--clr-darknavy);
     font-weight: var(--fw-regular);
+    line-height: 150%;
+}
+
+.hero-image {
+    width: 100%;
 }
 
 .signup-screen, .signup-section {
@@ -107,12 +113,6 @@ p, li {
 
 #email-placeholder {
     font-weight: var(--fw-bold);
-}
-
-ul {
-    /* list-style-image: url(assets/images/icon-list.svg);
-    margin-left: 1.5rem; */
-    
 }
 
 li {
@@ -164,7 +164,7 @@ input[type="email"]::placeholder {
 }
 
 input[type="submit"], a {
-    padding: 1rem;
+    padding: 1.5rem;
     border: none;
     background-color: var(--clr-darknavy);
     color: var(--clr-white);
@@ -174,10 +174,6 @@ input[type="submit"], a {
 .error-msg {
     color: var(--clr-vermellion);
     font-weight: var(--fw-bold);
-}
-
-.hide {
-    display: none;
 }
 
 .success-message {
@@ -198,3 +194,82 @@ a {
     text-align: center;
 }
 
+input[type="submit"]:hover, a:hover {
+    background-image: var(--clr-gradient1);
+    box-shadow: var(--bs-button);
+}
+
+
+@media screen and (min-width: 90rem) {
+    
+    body {
+        background-color: var(--clr-darknavy);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    main {
+        background-color: var(--clr-white);
+        /* width: 58rem; */
+        height: fit-content;
+        padding: 1.5rem;
+        border-radius: 2.25rem;
+    }
+
+    .signup-screen {
+        grid-template-columns: 1fr min-content;
+    }
+
+    .hero-image {
+        order: 1;
+        width: auto;
+    }
+
+    .signup-section{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 1.5rem;
+    }
+
+    .signup-content {
+        width: 23rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    form {
+        gap: 1.5rem;
+    }
+
+    .success-message {
+        width: 31.5rem;
+        height: fit-content;
+        padding: 2.5rem;
+        gap: 2.5rem;
+    }
+
+    .success-icon {
+        padding-bottom: 0.5rem;
+    }
+}
+
+
+
+
+
+/* error state */
+
+.hide {
+    display: none;
+}
+
+
+/* links */
+
+/* li images, format:
+https://stackoverflow.com/questions/52347084/positioning-a-svg-icon-as-list-style-image */
