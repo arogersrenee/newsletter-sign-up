@@ -21,7 +21,7 @@
 
   <main>
     <!-- Sign-up form start -->
-    <div class="signup-screen">
+    <div id="signup-screen" class="signup-screen">
       <div class="hero-image">
         <picture>
           <source media="(min-width: 70rem)" srcset="assets/images/illustration-sign-up-desktop.svg">
@@ -41,7 +41,7 @@
           <div class="email-row">
             <div class="email-label">
               <label for="email">Email address</label>
-              <span class="no-error error-msg">Valid email required</span>
+              <span id="error-msg" class="no-error error-msg">Valid email required</span>
             </div>
             <input type="email" placeholder="email@company.com" id="email" name="email">
           </div>
@@ -51,7 +51,7 @@
     </div>
     <!-- Sign-up form end -->
     <!-- Success message start -->
-    <div class="success-message hide">
+    <div id="success-message" class="success-message hide">
       <div class="success-content">
         <img src="assets/images/icon-success.svg" alt="checkmark icon" class="success-icon">
         <div class="success-content">
@@ -66,5 +66,6 @@
     </div>
     <!-- Success message end -->
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

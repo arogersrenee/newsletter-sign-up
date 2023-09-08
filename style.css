@@ -164,7 +164,7 @@ input[type="email"]::placeholder {
 }
 
 input[type="submit"], a {
-    padding: 1.5rem;
+    padding: 1rem;
     border: none;
     background-color: var(--clr-darknavy);
     color: var(--clr-white);
@@ -264,7 +264,7 @@ input[type="submit"]:hover, a:hover {
 
 /* error state */
 
-.hide {
+.hide, .no-error {
     display: none;
 }
 
