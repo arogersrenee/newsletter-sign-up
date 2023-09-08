@@ -264,6 +264,12 @@ input[type="submit"]:hover, a:hover {
 
 /* error state */
 
+input[type="email"].email-error-state {
+    border: 1px solid var(--clr-vermellion);
+    background-color: var(--clr-vermellion-15);
+    color: var(--clr-vermellion);
+}
+
 .hide, .no-error {
     display: none;
 }

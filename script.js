@@ -17,6 +17,7 @@
         function validateEmail() {
             if (!emailRegex.test(email.value.trim())){
                 errorMsg.classList.remove("no-error");
+                email.classList.add("email-error-state");
                 return false;
             } else {
                 subscribe.classList.add("hide");
