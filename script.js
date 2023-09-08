@@ -21,6 +21,7 @@
             } else {
                 subscribe.classList.add("hide");
                 confirmSub.classList.remove("hide");
+                emailPlaceholder.textContent = email.value.trim();
                 return true
             }
         }
