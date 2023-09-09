@@ -10,7 +10,7 @@
             new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
 
         form.addEventListener("submit", (e) => {
-            e.preventDefault;
+            e.preventDefault();
             validateEmail();
         })
 
